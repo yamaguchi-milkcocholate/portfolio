@@ -1,0 +1,44 @@
+.keireki-container {}
+
+.keireki-item {
+    padding: 0 0 2em 24px;
+}
+
+.keireki-item-header {
+    display: flex;
+    align-items: center;
+    color: inherit;
+    flex-direction: row;
+    height: auto;
+    justify-content: flex-start;
+    margin-left: -24px;
+    position: relative;
+    width: auto;
+}
+
+.keireki-item-header-icon {
+    border: 2px solid;
+    box-sizing: border-box;
+    height: 16px;
+    margin-right: 8px;
+    width: 16px;
+    border-radius: 50%;
+    color: #4AC9A8 !important;
+}
+
+.keireki-item-header-title {
+    font-size: 12px;
+    opacity: .8;
+    padding: 0 2px 0 0;
+}
+
+.keireki-item-body-title {
+    margin-top: 0.25em;
+    text-align: left;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.keireki-item-body-content {
+    margin-top: 0.5em;
+}
