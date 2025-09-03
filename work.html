@@ -31,7 +31,21 @@
           <li><a href="index.html#background">経歴</a></li>
           <li><a href="index.html#award">受賞歴</a></li>
           <li><a href="index.html#skillset">スキルセット</a></li>
-          <li><a href="work.html">成果物</a></li>
+          <li>
+            <a href="work.html#marketing-api"
+              >生成AIの自動マーケ分析API（受託案件）</a
+            >
+          </li>
+          <li>
+            <a href="work.html#ad-targeting-ly"
+              >広告ターゲティングモデル構築（LINEヤフー在籍時）</a
+            >
+          </li>
+          <li>
+            <a href="work.html#reco-recruit"
+              >レコメンドシステム開発・最適化（リクルート在籍時）</a
+            >
+          </li>
         </ul>
       </nav>
       <footer>
@@ -64,6 +78,154 @@
           <div class="image main" data-position="center">
             <img src="images/banner.jpg" alt="" />
           </div>
+          <div class="container">
+            <header class="major"></header>
+            <!-- === Auto Marketing Analysis API (Anonymized) === -->
+            <article id="marketing-api" class="work-item">
+              <img
+                src="images/marketing-api.png"
+                alt="生成AIを活用した自動マーケティング分析API"
+                width="500"
+                height="auto"
+              />
+
+              <h3>
+                生成AIを活用した自動マーケティング分析API・Webアプリ開発（受託案件）
+              </h3>
+              <p class="work-meta">
+                期間：2025年／担当：PoC・要件定義・設計・実装・デプロイ
+              </p>
+              <ul class="work-points">
+                <li>
+                  チラシ配布施策後の分析、次回配布施策の提案を自動化するWebアプリおよびAPIを開発
+                </li>
+                <li>Python + FastAPI／GCPでAPI化</li>
+                <li>LLM（OpenAI API）＋LangChainで分析ワークフローを構築</li>
+                <li><strong>分析工数を削減</strong>、意思決定の迅速化に貢献</li>
+              </ul>
+              <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">GCP</span>
+                <span class="tag">OpenAI API</span>
+                <span class="tag">LangChain</span>
+                <span class="tag">Data Engineering</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="container">
+            <!-- === Ad Targeting Model (LINE Yahoo) === -->
+            <article id="ad-targeting-ly" class="work-item">
+              <img
+                src="images/ad-targeting.png"
+                alt="広告ターゲティングモデル構築（LINEヤフー在籍時）"
+                width="500"
+                height="auto"
+              />
+
+              <h3>広告ターゲティングモデル構築（LINEヤフー在籍時）</h3>
+              <p class="work-meta">
+                役割：MLエンジニア／データサイエンティスト<br />
+                体制：要件整理・特徴量設計・モデル学習・A/Bテスト・本番運用
+              </p>
+
+              <h4>背景・課題</h4>
+              <p>
+                大規模ユーザーデータに基づき、広告配信のCTR/CVRの最適化が求められていた。<br />
+                配信効果を最大化するため、ターゲティング精度向上と運用しやすいML基盤の整備が必要だった。
+              </p>
+
+              <h4>アプローチ</h4>
+              <ul class="work-points">
+                <li>LLMを活用して行動ログから多様な特徴量を設計</li>
+                <li>Pytorch／TensorFlowによるベクトル表現学習・分類学習</li>
+                <li>
+                  Spark／Hive
+                  によるデータパイプライン、Airflowでスケジューリング
+                </li>
+                <li>オンラインA/Bテストで効果検証</li>
+              </ul>
+
+              <h4>成果</h4>
+              <ul class="work-points">
+                <li>
+                  再現性の高いMLパイプラインを整備し、後続施策の展開を加速
+                </li>
+              </ul>
+
+              <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">TensorFlow</span>
+                <span class="tag">PyTorch</span>
+                <span class="tag">Spark</span>
+                <span class="tag">Hive</span>
+                <span class="tag">Airflow</span>
+                <span class="tag">Ranking</span>
+                <span class="tag">A/B Testing</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="container">
+            <!-- === Recommendation System (Recruit) === -->
+            <article id="reco-recruit" class="work-item">
+              <img
+                src="images/reco-recruit.png"
+                alt="レコメンドシステム開発・最適化（リクルート在籍時）"
+                width="500"
+                height="auto"
+              />
+
+              <h3>レコメンドシステム開発・最適化（リクルート在籍時）</h3>
+              <p class="work-meta">
+                役割：MLエンジニア／データサイエンティスト<br />
+                体制：要件整理・特徴量設計・モデル学習・API開発・A/Bテスト・本番運用
+              </p>
+
+              <h4>背景・課題</h4>
+              <p>
+                大規模なユーザー×アイテム環境で、レコメンド精度と事業KPI（資料請求）の向上が求められていた。<br />
+                オンライン配信の可用性を保ちつつ、予測精度向上が課題。
+              </p>
+
+              <h4>アプローチ</h4>
+              <ul class="work-points">
+                <li>
+                  BigQuery
+                  に蓄積されたユーザ行動ログとアイテム情報を集計し、特徴量を抽出
+                </li>
+                <li>
+                  LightGBM のランキング学習（LGBM
+                  Ranker）を用いたレコメンドモデルを構築
+                </li>
+                <li>
+                  モデルの推論APIを
+                  <strong>AWS ECS</strong> 上に実装し、本番配信に統合
+                </li>
+                <li>オンラインA/Bテストにより効果検証を行い、継続的に改善</li>
+              </ul>
+
+              <h4>成果</h4>
+              <ul class="work-points">
+                <li>KPIを改善に貢献</li>
+                <li>
+                  再現性の高いMLパイプラインを整備し、後続の機能追加・施策展開を加速
+                </li>
+              </ul>
+
+              <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">LightGBM</span>
+                <span class="tag">BigQuery</span>
+                <span class="tag">Airflow</span>
+                <span class="tag">Recommendation Systems</span>
+                <span class="tag">Ranking</span>
+                <span class="tag">A/B Testing</span>
+              </div>
+            </article>
+          </div>
+
           <div class="container">
             <header class="major">
               <h3>塗り絵を作成するLINEアプリを作成しました</h3>
